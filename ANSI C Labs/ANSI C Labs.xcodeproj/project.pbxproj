@@ -75,17 +75,33 @@
 			children = (
 				AB3451101806EA5900EEF511 /* main.c */,
 				ABF33708180CBA5E00A7A7D9 /* Misc.c */,
+				B4BF824528E229FD0080597A /* Pointers */,
+				B4BF824428E229E50080597A /* Basics */,
+			);
+			path = "ANSI C Labs";
+			sourceTree = "<group>";
+		};
+		B4BF824428E229E50080597A /* Basics */ = {
+			isa = PBXGroup;
+			children = (
+				AB3451191806EAA400EEF511 /* ANSICBasics.h */,
+				AB34511A1806EAAE00EEF511 /* ANSICBasics01.c */,
+				AB34511C1807276800EEF511 /* ANSICBasics02.c */,
+			);
+			path = Basics;
+			sourceTree = "<group>";
+		};
+		B4BF824528E229FD0080597A /* Pointers */ = {
+			isa = PBXGroup;
+			children = (
 				ABF3370A180CBBD400A7A7D9 /* Utilities.h */,
 				ABA8ED61180DCFCB0039AB3C /* Utilities.c */,
 				ABF33702180CA6D800A7A7D9 /* Pointers.h */,
 				ABF33706180CA6F500A7A7D9 /* Pointers.c */,
 				ABF33705180CA6EB00A7A7D9 /* Person.h */,
 				ABF33703180CA6E300A7A7D9 /* Person.c */,
-				AB3451191806EAA400EEF511 /* ANSICBasics.h */,
-				AB34511A1806EAAE00EEF511 /* ANSICBasics01.c */,
-				AB34511C1807276800EEF511 /* ANSICBasics02.c */,
 			);
-			path = "ANSI C Labs";
+			path = Pointers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
