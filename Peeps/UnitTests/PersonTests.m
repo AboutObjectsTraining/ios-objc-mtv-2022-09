@@ -18,4 +18,30 @@
     NSLog(@"%@", fred);
 }
 
+- (void)testCustomInitializer {
+    Person *fred = [[Person alloc] initWithFirstName:@"Fred"
+                                            lastName:@"Smith"
+                                                 age:42];
+    NSLog(@"%@", fred);
+}
+
+- (void)testFactoryMethod {
+    Person *fred = [Person personWithFirstName:@"Fred" lastName:@"Smith" age:42];
+    NSLog(@"%@", fred);
+}
+
+- (void)testBarking {
+    id fred = [Person personWithFirstName:@"Fred" lastName:@"Smith" age:42];
+    Dog *rover = [[Dog alloc] init];
+    [fred setDog:rover];
+    
+    if ([fred respondsToSelector:@selector(bark)]) {
+        [fred bark];
+    }
+    
+    [fred growl];
+    
+    NSLog(@"%@", fred);
+}
+
 @end
