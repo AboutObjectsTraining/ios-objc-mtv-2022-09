@@ -14,6 +14,7 @@
 		B4650CD628E4DD9A001EE100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4650CD528E4DD9A001EE100 /* Assets.xcassets */; };
 		B4650CD928E4DD9A001EE100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4650CD728E4DD9A001EE100 /* LaunchScreen.storyboard */; };
 		B4650CDC28E4DD9A001EE100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4650CDB28E4DD9A001EE100 /* main.m */; };
+		B4650CE428E4F884001EE100 /* CLNCoolViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4650CE328E4F884001EE100 /* CLNCoolViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		B4650CD828E4DD9A001EE100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4650CDA28E4DD9A001EE100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4650CDB28E4DD9A001EE100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4650CE228E4F884001EE100 /* CLNCoolViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLNCoolViewCell.h; sourceTree = "<group>"; };
+		B4650CE328E4F884001EE100 /* CLNCoolViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLNCoolViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				B4650CCD28E4DD98001EE100 /* SceneDelegate.m */,
 				B4650CCF28E4DD98001EE100 /* CLNCoolViewController.h */,
 				B4650CD028E4DD98001EE100 /* CLNCoolViewController.m */,
+				B4650CE228E4F884001EE100 /* CLNCoolViewCell.h */,
+				B4650CE328E4F884001EE100 /* CLNCoolViewCell.m */,
 				B4650CD228E4DD98001EE100 /* Main.storyboard */,
 				B4650CD528E4DD9A001EE100 /* Assets.xcassets */,
 				B4650CD728E4DD9A001EE100 /* LaunchScreen.storyboard */,
@@ -148,6 +153,7 @@
 			files = (
 				B4650CD128E4DD98001EE100 /* CLNCoolViewController.m in Sources */,
 				B4650CCB28E4DD98001EE100 /* AppDelegate.m in Sources */,
+				B4650CE428E4F884001EE100 /* CLNCoolViewCell.m in Sources */,
 				B4650CDC28E4DD9A001EE100 /* main.m in Sources */,
 				B4650CCE28E4DD98001EE100 /* SceneDelegate.m in Sources */,
 			);
