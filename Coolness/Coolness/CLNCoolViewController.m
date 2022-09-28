@@ -10,10 +10,13 @@
     self.view = [[UIView alloc] init];
     self.view.backgroundColor = UIColor.systemBrownColor;
     
-    UIView *subview1 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(20, 60, 240, 40)];
-    UIView *subview2 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(40, 120, 240, 40)];
+    CLNCoolViewCell *subview1 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(20, 60, 240, 40)];
+    CLNCoolViewCell *subview2 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(40, 120, 240, 40)];
     [self.view addSubview:subview1];
     [self.view addSubview:subview2];
+    
+    subview1.text = @"Hello World! 🌎🌏🌍";
+    subview2.text = @"Cool View Cells Rock! 🥂🍾";
     
     subview1.backgroundColor = UIColor.systemPurpleColor;
     subview2.backgroundColor = UIColor.systemOrangeColor;
