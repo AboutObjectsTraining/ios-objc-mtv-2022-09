@@ -2,14 +2,9 @@
 // See LICENSE.txt for this project's licensing information.
 
 #import <Foundation/Foundation.h>
-#import "Dog.h"
+#import <Peeps/Dog.h>
 
-@interface Person : NSObject {
-    NSString *_firstName;
-    NSString *_lastName;
-    NSInteger _age;
-    Dog *_dog;
-}
+@interface Person : NSObject
 
 - (instancetype)initWithFirstName:(NSString *)aFirstName
                          lastName:(NSString *)aLastName;
@@ -23,26 +18,12 @@
                                 age:(NSInteger)anAge;
 
 
-- (NSString *)firstName;
-- (void)setFirstName:(NSString *)newValue;
+@property (copy, nonatomic) NSString *firstName;
+@property (copy, nonatomic) NSString *lastName;
+@property (readonly, nonatomic) NSString *fullName;
+@property (assign, nonatomic) NSInteger age;
+@property (strong, nonatomic) Dog *dog;
 
-- (NSString *)lastName;
-- (void)setLastName:(NSString *)newValue;
-
-- (NSInteger)age;
-- (void)setAge:(NSInteger)newValue;
-
-- (Dog *)dog;
-- (void)setDog:(Dog *)newValue;
+@property (readonly, nonatomic) NSArray *dogs;
 
 @end
-
-
-
-// C struct example for comparison
-struct C_Person {
-    Class isa;
-    const char *firstName;
-    const char *lastName;
-    int age;
-};

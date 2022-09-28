@@ -11,9 +11,12 @@
 
 - (void)testCreateAndInitializePerson {
     Person *fred = [[Person alloc] init];
-    [fred setFirstName:@"Fred"];
-    [fred setLastName:@"Smith"];
-    [fred setAge:42];
+    fred.firstName = @"Fred";
+    fred.lastName = @"Smith";
+    fred.age = 42;
+//    [fred setFirstName:@"Fred"];
+//    [fred setLastName:@"Smith"];
+//    [fred setAge:42];
     
     NSLog(@"%@", fred);
 }
