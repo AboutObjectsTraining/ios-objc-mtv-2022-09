@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Dog : NSObject
+@interface Dog : NSObject <NSCopying>
 
 - (void)bark;
 - (void)growl;

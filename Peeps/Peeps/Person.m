@@ -20,11 +20,11 @@
     if (self == nil) return nil;
     
     // Initialize ivars.
-    _firstName = aFirstName;
-    _lastName = aLastName;
+    _firstName = [aFirstName copy];
+    _lastName = [aLastName copy];
     _age = anAge;
     
-    // Do other initialization, if necessary.
+    // Call methods on self, if necessary.
     
     return self;
 }
@@ -57,15 +57,14 @@
     return _firstName;
 }
 - (void)setFirstName:(NSString *)newValue {
-    // FIXME: Do something with newValue...
-    _firstName = newValue;
+    _firstName = [newValue copy];
 }
 
 - (NSString *)lastName {
     return _lastName;
 }
 - (void)setLastName:(NSString *)newValue {
-    _lastName = newValue;
+    _lastName = [newValue copy];
 }
 
 - (NSString *)fullName {

@@ -44,4 +44,12 @@
     NSLog(@"%@", fred);
 }
 
+- (void)testCopyingBehavior {
+    Dog *rover = [[Dog alloc] init];
+    
+    Dog *copyOfRover = [rover copy];
+    
+    NSLog(@"%@", copyOfRover);
+}
+
 @end

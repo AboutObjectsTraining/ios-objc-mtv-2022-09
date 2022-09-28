@@ -13,4 +13,10 @@
     printf("Grrrr!\n");
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    Dog *newDog = [[Dog alloc] init];
+    // Copy any ivars that need to be copied here.
+    return newDog;
+}
+
 @end
