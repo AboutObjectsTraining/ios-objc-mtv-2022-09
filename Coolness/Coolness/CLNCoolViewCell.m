@@ -111,7 +111,7 @@ const UIEdgeInsets CLNTextInsets = {
     CGFloat deltaX = currLocation.x - prevLocation.x;
     CGFloat deltaY = currLocation.y - prevLocation.y;
     
-    touch.view.frame = CGRectOffset(touch.view.frame, deltaX, deltaY);
+    self.frame = CGRectOffset(self.frame, deltaX, deltaY);
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

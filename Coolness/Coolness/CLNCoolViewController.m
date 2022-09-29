@@ -4,12 +4,22 @@
 #import "CLNCoolViewController.h"
 #import "CLNCoolViewCell.h"
 
-@interface CLNCoolViewController ()
+@interface CLNCoolViewController () <UITextFieldDelegate>
 @property (strong, nonatomic) UITextField *textField;
 @property (strong, nonatomic) UIView *contentView;
 @end
 
 @implementation CLNCoolViewController
+
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"In %s", __func__);
+//    [super touchesBegan:touches withEvent:event];
+//}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
 
 - (void)addCell {
     NSLog(@"In %s", __func__);
@@ -47,6 +57,8 @@
     self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.textField.placeholder = @"Type something here";
     
+    self.textField.delegate = self;
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     [accessoryView addSubview:button];
     [button setTitle:@" Add Cell " forState:UIControlStateNormal];
@@ -68,6 +80,11 @@
     
     subview1.backgroundColor = UIColor.systemPurpleColor;
     subview2.backgroundColor = UIColor.systemOrangeColor;
+    
+//    UIView *someSubview = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 40, 20)];
+//    someSubview.backgroundColor = UIColor.blueColor;
+//
+//    [subview1 addSubview:someSubview];
 }
 
 @end
