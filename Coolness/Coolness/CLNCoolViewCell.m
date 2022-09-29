@@ -21,15 +21,26 @@ const UIEdgeInsets CLNTextInsets = {
     self = [super initWithFrame:frame];
     if (self == nil) return nil;
     
-    self.layer.borderWidth = 3;
-    self.layer.borderColor = UIColor.whiteColor.CGColor;
-    self.layer.cornerRadius = 10;
-    self.layer.masksToBounds = YES;
+    [self configureLayer];
+    [self configureGestureRecognizers];
     
     return self;
 }
 
 // FIXME: We should override other designated initializers.
+
+- (void)configureGestureRecognizers {
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bounce)];
+    recognizer.numberOfTapsRequired = 2;
+    [self addGestureRecognizer:recognizer];
+}
+
+- (void)configureLayer {
+    self.layer.borderWidth = 3;
+    self.layer.borderColor = UIColor.whiteColor.CGColor;
+    self.layer.cornerRadius = 10;
+    self.layer.masksToBounds = YES;
+}
 
 + (NSDictionary *)textAttributes {
     return @{
@@ -46,6 +57,28 @@ const UIEdgeInsets CLNTextInsets = {
 - (void)setText:(NSString *)text {
     _text = [text copy];
     [self sizeToFit];
+}
+
+// MARK: - Animation
+
+- (void)bounce {
+    NSLog(@"In %s", __func__);
+    [self animateBounceWithDuration:1 size:CGSizeMake(120, 240)];
+}
+
+- (void)configureBounceWithSize:(CGSize)size {
+    typeof(self) __weak weakSelf = self;
+    [UIView modifyAnimationsWithRepeatCount:5 autoreverses:YES animations:^{
+        CGAffineTransform translation = CGAffineTransformMakeTranslation(size.width, size.height);
+        weakSelf.transform = CGAffineTransformRotate(translation, M_PI_2);
+    }];
+}
+
+- (void)animateBounceWithDuration:(NSTimeInterval)duration size:(CGSize)size {
+    typeof(self) __weak weakSelf = self;
+    [UIView animateWithDuration:duration
+                     animations:^{ [weakSelf configureBounceWithSize:size]; }
+                     completion:^(BOOL finished) { weakSelf.transform = CGAffineTransformIdentity; }];
 }
 
 // MARK: - Drawing and resizing
