@@ -25,6 +25,7 @@
 		B4078D0228E781B2003D3878 /* RLMStoreController.h in Headers */ = {isa = PBXBuildFile; fileRef = B4078CF428E781B1003D3878 /* RLMStoreController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4078D0328E781B2003D3878 /* RLMStoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4078CF528E781B2003D3878 /* RLMStoreController.m */; };
 		B4078D0428E781B2003D3878 /* RLMBook.h in Headers */ = {isa = PBXBuildFile; fileRef = B4078CF628E781B2003D3878 /* RLMBook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4078D0728E79459003D3878 /* RELEditBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4078D0628E79459003D3878 /* RELEditBookController.m */; };
 		B4C23AF028E75347005BEA6C /* RELAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C23AEF28E75347005BEA6C /* RELAppDelegate.m */; };
 		B4C23AF328E75347005BEA6C /* RELSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C23AF228E75347005BEA6C /* RELSceneDelegate.m */; };
 		B4C23AF928E75347005BEA6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C23AF728E75347005BEA6C /* Main.storyboard */; };
@@ -77,6 +78,8 @@
 		B4078CF428E781B1003D3878 /* RLMStoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLMStoreController.h; sourceTree = "<group>"; };
 		B4078CF528E781B2003D3878 /* RLMStoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLMStoreController.m; sourceTree = "<group>"; };
 		B4078CF628E781B2003D3878 /* RLMBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLMBook.h; sourceTree = "<group>"; };
+		B4078D0528E79459003D3878 /* RELEditBookController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RELEditBookController.h; sourceTree = "<group>"; };
+		B4078D0628E79459003D3878 /* RELEditBookController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RELEditBookController.m; sourceTree = "<group>"; };
 		B4C23AEB28E75347005BEA6C /* ReadingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C23AEE28E75347005BEA6C /* RELAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RELAppDelegate.h; sourceTree = "<group>"; };
 		B4C23AEF28E75347005BEA6C /* RELAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RELAppDelegate.m; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				B4C23AF228E75347005BEA6C /* RELSceneDelegate.m */,
 				B4078CD228E76D43003D3878 /* RELReadingListController.h */,
 				B4078CD328E76D43003D3878 /* RELReadingListController.m */,
+				B4078D0528E79459003D3878 /* RELEditBookController.h */,
+				B4078D0628E79459003D3878 /* RELEditBookController.m */,
 				B4078CD528E76F3A003D3878 /* RELViewBookController.h */,
 				B4078CD628E76F3A003D3878 /* RELViewBookController.m */,
 				B4C23AF728E75347005BEA6C /* Main.storyboard */,
@@ -301,6 +306,7 @@
 			files = (
 				B4078CD728E76F3A003D3878 /* RELViewBookController.m in Sources */,
 				B4C23AF028E75347005BEA6C /* RELAppDelegate.m in Sources */,
+				B4078D0728E79459003D3878 /* RELEditBookController.m in Sources */,
 				B4C23B0128E75349005BEA6C /* main.m in Sources */,
 				B4078CD428E76D43003D3878 /* RELReadingListController.m in Sources */,
 				B4C23AF328E75347005BEA6C /* RELSceneDelegate.m in Sources */,

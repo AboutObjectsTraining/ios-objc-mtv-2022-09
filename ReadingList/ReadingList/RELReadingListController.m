@@ -2,6 +2,7 @@
 // See LICENSE.txt for this project's licensing information.
 
 #import "RELReadingListController.h"
+#import "RELViewBookController.h"
 #import <ReadingListModel/ReadingListModel.h>
 
 @interface RELReadingListController ()
@@ -17,6 +18,12 @@
     }
     return _readingList;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    RELViewBookController *controller = segue.destinationViewController;
+    controller.book = [self.readingList bookAtIndexPath:self.tableView.indexPathForSelectedRow];
+}
+
 
 // MARK: - Unwind segues
 

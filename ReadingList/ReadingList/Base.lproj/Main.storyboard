@@ -203,6 +203,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="firstNameLabel" destination="uGu-9V-qRV" id="BsF-4K-4aR"/>
+                        <outlet property="lastNameLabel" destination="QIt-ZN-9cv" id="LvG-P5-pYL"/>
+                        <outlet property="titleLabel" destination="9N9-cc-HeW" id="xaw-Fd-9aj"/>
+                        <outlet property="yearLabel" destination="1Bx-P8-EAy" id="FAK-NV-Xhu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6t-uB-y5U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,7 +217,7 @@
         <!--Edit Book-->
         <scene sceneID="SZs-OR-UzQ">
             <objects>
-                <tableViewController id="Dg2-sB-pvG" sceneMemberID="viewController">
+                <tableViewController id="Dg2-sB-pvG" customClass="RELEditBookController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="tMD-0b-Km9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,6 +325,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="firstNameField" destination="hcE-qD-s3D" id="ySg-Qe-18M"/>
+                        <outlet property="lastNameField" destination="3uX-qL-w3D" id="x5E-bF-Eqa"/>
+                        <outlet property="titleField" destination="YiN-nn-ndQ" id="U6U-eG-BBf"/>
+                        <outlet property="yearField" destination="k30-Mt-iOe" id="QBq-4g-6bQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5PE-bG-ani" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="6JP-co-pTB" userLabel="Exit" sceneMemberID="exit"/>
