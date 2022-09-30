@@ -29,71 +29,26 @@
     [self.contentView addSubview:newCell];
 }
 
-- (void)loadView3 {
-    [NSBundle.mainBundle loadNibNamed:@"CoolStuff" owner:self options:nil];
-}
-
-- (void)loadView2 {
-    NSArray *topLevelObjs = [NSBundle.mainBundle loadNibNamed:@"CoolStuff" owner:nil options:nil];
-    self.view = topLevelObjs.firstObject;
-}
-
-- (void)loadView1 {
-    self.view = [[UIView alloc] init];
-    self.view.backgroundColor = UIColor.systemBrownColor;
-    
-    CGRect screenRect = UIScreen.mainScreen.bounds;
-    CGRect accessoryRect;
-    CGRect contentRect;
-    CGRectDivide(screenRect, &accessoryRect, &contentRect, 105, CGRectMinYEdge);
-    
-    UIView *accessoryView = [[UIView alloc] initWithFrame:accessoryRect];
-    self.contentView = [[UIView alloc] initWithFrame:contentRect];
-    
-    self.contentView.clipsToBounds = YES;
-    
-    [self.view addSubview:accessoryView];
-    [self.view addSubview:self.contentView];
-    
-    accessoryView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.6];
-    self.contentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.4];
-    
-    // Controls
-    
-    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(20, 60, 240, 36)];
-    [accessoryView addSubview:self.textField];
-    self.textField.borderStyle = UITextBorderStyleRoundedRect;
-    self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    self.textField.placeholder = @"Type something here";
-    
-    self.textField.delegate = self;
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [accessoryView addSubview:button];
-    [button setTitle:@" Add Cell " forState:UIControlStateNormal];
-    [button setTitle:@"Adding..." forState:UIControlStateHighlighted];
-    [button sizeToFit];
-    button.frame = CGRectOffset(button.frame, 280, 60);
-    
-    [button addTarget:self action:@selector(addCell) forControlEvents:UIControlEventTouchUpInside];
-    
-    // Cells
-    
-    CLNCoolViewCell *subview1 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(20, 60, 240, 40)];
-    CLNCoolViewCell *subview2 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(40, 120, 240, 40)];
-    [self.contentView addSubview:subview1];
-    [self.contentView addSubview:subview2];
-    
-    subview1.text = @"Hello World! 🌎🌏🌍";
-    subview2.text = @"Cool View Cells Rock! 🥂🍾";
-    
-    subview1.backgroundColor = UIColor.systemPurpleColor;
-    subview2.backgroundColor = UIColor.systemOrangeColor;
-    
-//    UIView *someSubview = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 40, 20)];
-//    someSubview.backgroundColor = UIColor.blueColor;
+//- (void)loadView3 {
+//    [NSBundle.mainBundle loadNibNamed:@"CoolStuff" owner:self options:nil];
+//}
 //
-//    [subview1 addSubview:someSubview];
-}
+//- (void)loadView2 {
+//    NSArray *topLevelObjs = [NSBundle.mainBundle loadNibNamed:@"CoolStuff" owner:nil options:nil];
+//    self.view = topLevelObjs.firstObject;
+//}
+//
+//- (void)viewDidLoad {
+//    CLNCoolViewCell *subview1 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(20, 60, 240, 40)];
+//    CLNCoolViewCell *subview2 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(40, 120, 240, 40)];
+//    [self.contentView addSubview:subview1];
+//    [self.contentView addSubview:subview2];
+//
+//    subview1.text = @"Hello World! 🌎🌏🌍";
+//    subview2.text = @"Cool View Cells Rock! 🥂🍾";
+//
+//    subview1.backgroundColor = UIColor.systemPurpleColor;
+//    subview2.backgroundColor = UIColor.systemOrangeColor;
+//}
 
 @end

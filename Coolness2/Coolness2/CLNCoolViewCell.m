@@ -11,8 +11,12 @@ const UIEdgeInsets CLNTextInsets = {
 };
 
 @interface CLNCoolViewCell ()
+
 @property (class, readonly, nonatomic) NSDictionary *textAttributes;
 @property (getter=isHighlighted, nonatomic) BOOL highlighted;
+
+@property (nonatomic) IBInspectable CGFloat cornerRadius;
+
 @end
 
 @implementation CLNCoolViewCell
@@ -27,7 +31,15 @@ const UIEdgeInsets CLNTextInsets = {
     return self;
 }
 
-// FIXME: We should override other designated initializers.
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (!self) return nil;
+    
+    [self configureLayer];
+    [self configureGestureRecognizers];
+    
+    return self;
+}
 
 - (void)configureGestureRecognizers {
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bounce)];
@@ -47,6 +59,13 @@ const UIEdgeInsets CLNTextInsets = {
         NSFontAttributeName : [UIFont boldSystemFontOfSize:20],
         NSForegroundColorAttributeName : UIColor.whiteColor
     };
+}
+
+- (CGFloat)cornerRadius {
+    return self.layer.cornerRadius;
+}
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    self.layer.cornerRadius = cornerRadius;
 }
 
 - (void)setHighlighted:(BOOL)highlighted {
